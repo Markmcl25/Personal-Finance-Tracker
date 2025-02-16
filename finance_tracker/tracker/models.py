@@ -19,3 +19,12 @@ class Transaction(models.Model):
     def __str__(self):
         return f"{self.user.username} - {self.title} - {self.amount}"
 
+class Budget(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    monthly_budget = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    savings_goal = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    current_savings = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+
+    def __str__(self):
+        return f"{self.user.username}'s Budget"
+
