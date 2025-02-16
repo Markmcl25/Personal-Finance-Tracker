@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Welcome, {{ user.username }}!</h2>
+    <p>Total Income: ${{ total_income }}</p>
+    <p>Total Expenses: ${{ total_expense }}</p>
+    <p>Remaining Balance: ${{ balance }}</p>
+
+    <h3>Recent Transactions:</h3>
+    <ul>
+        {% for transaction in transactions %}
+            <li>{{ transaction.title }} - ${{ transaction.amount }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
