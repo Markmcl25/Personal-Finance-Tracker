@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     #'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'finance_tracker.tracker',
     'tracker',
     'localhost',
     '127.0.0.1',
