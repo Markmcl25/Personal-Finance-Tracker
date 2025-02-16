@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'finance_tracker.tracker',  # Use full dotted path
+    'tracker',
 ]
 
 MIDDLEWARE = [
