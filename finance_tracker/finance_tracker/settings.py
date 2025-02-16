@@ -29,8 +29,11 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    os.getenv('HEROKU_APP_NAME', '') + '.herokuapp.com'
 ]
+
+HEROKU_APP_NAME = os.getenv('HEROKU_APP_NAME')
+if HEROKU_APP_NAME:
+    ALLOWED_HOSTS.append(f"{HEROKU_APP_NAME}.herokuapp.com")
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-markmcl25-personalfinan-rrgvtsfxjve.ws-eu117.gitpod.io'
