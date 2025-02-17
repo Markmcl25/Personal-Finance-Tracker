@@ -20,8 +20,10 @@ from tracker import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('tracker.urls')),
     path('accounts/', include('django.contrib.auth.urls')),  # Default login/logout URLs
     path('signup/', views.signup, name='signup'),  # Custom signup view
     path('', views.dashboard, name='dashboard'),  # Default homepage after login
+    path('', views.home, name='home'),
 ]
 
