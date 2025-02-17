@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
+    'personal-finance-tracker-lad.herokuapp.com',
 ]
 
 HEROKU_APP_NAME = os.getenv('HEROKU_APP_NAME')
