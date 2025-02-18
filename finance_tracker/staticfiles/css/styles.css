@@ -1,0 +1,23 @@
+/* Make the page take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push content to take available space */
+.content {
+    flex: 1;
+}
+
+/* Footer should always stay at the bottom */
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    width: 100%;
+}

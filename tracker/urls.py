@@ -1,11 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
-from tracker import views
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('tracker.urls')),  # Include app-specific URLs
-    path('accounts/', include('django.contrib.auth.urls')),  # Default login/logout URLs
-    path('signup/', views.signup, name='signup'),  # Custom signup view
-    path('', views.dashboard, name='dashboard'),  # Set dashboard as the homepage after login
+    path('', views.dashboard, name='dashboard'),  # Dashboard view as the homepage after login
+    # Additional URLs for tracker-specific views can be added here
 ]
